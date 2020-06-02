@@ -1,5 +1,5 @@
 class Bilboard::Top5
-  attr_accessor :title, :artist, :rank :url
+  attr_accessor :title, :artist, :rank,:url
 
 def self.all 
 #will return the top 5 list
