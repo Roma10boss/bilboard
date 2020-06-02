@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require './lib/top5bilboard'
+require_relative '../lib/top5bilboard'
 
 Bilboard::CLI.new.call

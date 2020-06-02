@@ -15,6 +15,7 @@ class Bilboard::CLI
     @top5 = Bilboard::Top5.all
     @top5.each.with-index(1) do |top5, i|
       puts "#{i}. #{top5.title}- #{top5.artist} - #{top5.rank}- #{top5.url}"
+    end 
   end 
   
   def menu 
@@ -46,6 +47,7 @@ class Bilboard::CLI
         list_bilboard
       else 
         puts "Wrong entry, type top or bye"
+      end 
     end 
   end 
 end

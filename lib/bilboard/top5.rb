@@ -3,7 +3,7 @@ class Bilboard::Top5
 
 def self.all 
 #will return the top 5 list
- puts <<-DOC..gsub /^\, ''
+ puts <<-DOC.gsub /^\s*/, ''
     1. Savage
     2. Say so
     3. Blinding lights
