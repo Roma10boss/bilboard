@@ -10,23 +10,23 @@ class Bilboard::CLI
   
   def list_bilboard
     #here is the chart  url https://www.billboard.com/charts/hot-100
-    puts "this week top 5:"
+    #puts "this week top 5:"
    
     @top5 = Bilboard::Top5.all
-    @top5.each.with-index(1) do |top5, i|
+    @top5.each.with_index(1) do |top5, i|
       puts "#{i}. #{top5.title}- #{top5.artist} - #{top5.rank}- #{top5.url}"
     end 
   end 
   
   def menu 
-    puts "emter the song number you would like more info about or type top to see the top 5 or type bye to leave "
+    puts "Enter the song number you would like more info about or type top to see the top 5 or type bye to leave "
     input = nil 
     while input!= "bye"
     input=gets.strip.downcase
     
     if input.to_i > 0
-      the_top5 = top5[input.to_i-1]
-      puts "#{top5.title}- #{top5.artist} - #{top5.rank}- #{top5.url}"
+      the_top5 = @top5[input.to_i-1]
+      puts "#{@top5.title}- #{@top5.artist} - #{@top5.rank}- #{@top5.url}"
       
       elsif input == "top"
       list_bilboard
