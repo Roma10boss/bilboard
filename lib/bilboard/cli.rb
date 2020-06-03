@@ -14,7 +14,9 @@ class Bilboard::CLI
    
     @top5 = Bilboard::Top5.all
     @top5.each.with_index(1) do |top5, i|
-      puts "#{i}. #{top5.title}- #{top5.artist} - #{top5.rank}- #{top5.url}"
+      #puts 
+      
+      #"#{i}. #{top5.title}- #{top5.artist} - #{top5.rank}- #{top5.url}"
     end 
   end 
   
@@ -24,36 +26,33 @@ class Bilboard::CLI
     while input!= "bye"
     input=gets.strip.downcase
     
-    if input.to_i > 0 && input.to_i<6
-      the_top5 = @top5[input.to_i-1]
+    if input.to_i > 0 && input.to_i < 6
+       the_top5 = @top5[input.to_i-1]
       puts "#{@top5.title}- #{@top5.artist} - #{@top5.rank}- #{@top5.url}"
       
       elsif input == "top"
       puts "Here is the top 5 again" 
       list_bilboard
-      elsif input == "bye"
-        bye
-    elsif
-        
-     case input 
-      when "1"
-        puts "more info on 1"
-      when "2"
-        puts "more info on 2"
-      when "3"
-        puts "more info on 3"
-      when "4"
-        puts "more info on 4"
-      when "5"
-        puts "more info on 5"
-      when "top"
-        list_bilboard
+     #case input 
+      #when "1"
+       #puts "more info on 1"
+      #when "2"
+        #puts "more info on 2"
+      #when "3"
+        #puts "more info on 3"
+      #when "4"
+        #puts "more info on 4"
+      #when "5"
+        #puts "more info on 5"
+      #when "top"
+        #list_bilboard
       else 
         puts "Wrong entry, type top or bye"
-      end 
+      end
     end 
+    #bye
   end 
-end
+  
   def bye 
   puts "Thanks for stopping by see you next time for a new top 5."
  end 
